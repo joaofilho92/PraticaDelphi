@@ -4,10 +4,21 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TForm1 = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    memo1: TMemo;
+    btnElimina: TButton;
+    Label2: TLabel;
+    edt1: TEdit;
+    btnAggiungi: TButton;
+    btnNuovo: TButton;
+    procedure btnAggiungiClick(Sender: TObject);
+    procedure btnNuovoClick(Sender: TObject);
+    procedure btnEliminaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,5 +31,21 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.btnAggiungiClick(Sender: TObject);
+begin
+   memo1.Lines.Add(edt1.Text);
+end;
+
+procedure TForm1.btnEliminaClick(Sender: TObject);
+begin
+  memo1.Lines.Delete(memo1.Lines.Count-1);
+end;
+
+procedure TForm1.btnNuovoClick(Sender: TObject);
+begin
+  edt1.Clear;
+  memo1.Clear;
+end;
 
 end.
