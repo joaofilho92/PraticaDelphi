@@ -2,26 +2,23 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 594
-  ClientWidth = 804
+  ClientHeight = 593
+  ClientWidth = 800
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 804
-    Height = 594
+    Width = 800
+    Height = 593
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 328
-    ExplicitTop = 216
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Label1: TLabel
       Left = 40
       Top = 16
@@ -107,6 +104,15 @@ object Form1: TForm1
       Caption = 'Nuovo'
       TabOrder = 3
       OnClick = btnNuovoClick
+    end
+    object btnSalva: TButton
+      Left = 456
+      Top = 464
+      Width = 129
+      Height = 41
+      Caption = 'Salva Lista'
+      TabOrder = 4
+      OnClick = btnSalvaClick
     end
   end
 end

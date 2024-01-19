@@ -16,9 +16,12 @@ type
     edt1: TEdit;
     btnAggiungi: TButton;
     btnNuovo: TButton;
+    btnSalva: TButton;
     procedure btnAggiungiClick(Sender: TObject);
     procedure btnNuovoClick(Sender: TObject);
     procedure btnEliminaClick(Sender: TObject);
+    procedure btnSalvaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,6 +49,17 @@ procedure TForm1.btnNuovoClick(Sender: TObject);
 begin
   edt1.Clear;
   memo1.Clear;
+end;
+
+procedure TForm1.btnSalvaClick(Sender: TObject);
+begin
+  memo1.Lines.SaveToFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  if FileExists('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt') then
+  memo1.Lines.LoadFromFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
 end;
 
 end.
