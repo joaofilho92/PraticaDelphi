@@ -60,7 +60,6 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   if FileExists('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt') then
   memo1.Lines.LoadFromFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
-
 end;
 
 end.

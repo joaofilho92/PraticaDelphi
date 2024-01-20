@@ -19,8 +19,6 @@ object Form1: TForm1
     Height = 593
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 796
-    ExplicitHeight = 592
     object Label1: TLabel
       Left = 40
       Top = 16
