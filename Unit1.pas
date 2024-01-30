@@ -4,10 +4,10 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Unit2;
 
 type
-  TForm1 = class(TForm)
+  TmainForm = class(TForm)
     Panel1: TPanel;
     Label1: TLabel;
     memo1: TMemo;
@@ -17,11 +17,13 @@ type
     btnAggiungi: TButton;
     btnNuovo: TButton;
     btnSalva: TButton;
+    Button1: TButton;
     procedure btnAggiungiClick(Sender: TObject);
     procedure btnNuovoClick(Sender: TObject);
     procedure btnEliminaClick(Sender: TObject);
     procedure btnSalvaClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,38 +31,42 @@ type
   end;
 
 var
-  Form1: TForm1;
+  mainForm: TmainForm;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.btnAggiungiClick(Sender: TObject);
+procedure TmainForm.btnAggiungiClick(Sender: TObject);
 begin
    memo1.Lines.Add(edt1.Text);
 end;
 
-procedure TForm1.btnEliminaClick(Sender: TObject);
+procedure TmainForm.btnEliminaClick(Sender: TObject);
 begin
   memo1.Lines.Delete(memo1.Lines.Count-1);
 end;
 
-procedure TForm1.btnNuovoClick(Sender: TObject);
+procedure TmainForm.btnNuovoClick(Sender: TObject);
 begin
   edt1.Clear;
   memo1.Clear;
 end;
 
-procedure TForm1.btnSalvaClick(Sender: TObject);
+procedure TmainForm.btnSalvaClick(Sender: TObject);
 begin
-  memo1.Lines.SaveToFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
+  memo1.Lines.SaveToFile('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt');
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TmainForm.Button1Click(Sender: TObject);
 begin
-  if FileExists('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt') then
-  memo1.Lines.LoadFromFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
+  Form2.show;
+end;
 
+procedure TmainForm.FormCreate(Sender: TObject);
+begin
+  if FileExists('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt') then
+  memo1.Lines.LoadFromFile('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt');
 end;
 
 end.

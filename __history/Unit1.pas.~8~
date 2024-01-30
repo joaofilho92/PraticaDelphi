@@ -20,7 +20,6 @@ type
     procedure btnAggiungiClick(Sender: TObject);
     procedure btnNuovoClick(Sender: TObject);
     procedure btnEliminaClick(Sender: TObject);
-    procedure btnSalvaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,11 +47,6 @@ procedure TForm1.btnNuovoClick(Sender: TObject);
 begin
   edt1.Clear;
   memo1.Clear;
-end;
-
-procedure TForm1.btnSalvaClick(Sender: TObject);
-begin
-  memo1.Lines.SaveToFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\test.txt');
 end;
 
 end.

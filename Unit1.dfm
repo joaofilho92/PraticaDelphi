@@ -1,9 +1,9 @@
-object Form1: TForm1
+object mainForm: TmainForm
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 593
-  ClientWidth = 800
+  Caption = 'Form Principale'
+  ClientHeight = 594
+  ClientWidth = 804
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,10 @@ object Form1: TForm1
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 800
-    Height = 593
+    Width = 804
+    Height = 594
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 796
-    ExplicitHeight = 592
     object Label1: TLabel
       Left = 40
       Top = 16
@@ -46,7 +44,7 @@ object Form1: TForm1
       Top = 527
       Width = 129
       Height = 34
-      Caption = 'ELIMINA'
+      Caption = 'Elimina Ultima Riga'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
@@ -104,18 +102,12 @@ object Form1: TForm1
       Width = 121
       Height = 34
       Caption = 'Nuovo'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Segoe UI Semibold'
-      Font.Style = [fsBold]
-      ParentFont = False
       TabOrder = 3
       OnClick = btnNuovoClick
     end
     object btnSalva: TButton
       Left = 456
-      Top = 464
+      Top = 472
       Width = 129
       Height = 41
       Caption = 'Salva Lista'
@@ -127,6 +119,15 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 4
       OnClick = btnSalvaClick
+    end
+    object Button1: TButton
+      Left = 702
+      Top = 16
+      Width = 75
+      Height = 25
+      Caption = 'Form2'
+      TabOrder = 5
+      OnClick = Button1Click
     end
   end
 end

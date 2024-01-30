@@ -21,7 +21,6 @@ type
     procedure btnNuovoClick(Sender: TObject);
     procedure btnEliminaClick(Sender: TObject);
     procedure btnSalvaClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,12 +52,7 @@ end;
 
 procedure TForm1.btnSalvaClick(Sender: TObject);
 begin
-  memo1.Lines.SaveToFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\test.txt');
-end;
-
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-  memo1.Lines.LoadFromFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\test.txt')
+  memo1.Lines.SaveToFile('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt');
 end;
 
 end.

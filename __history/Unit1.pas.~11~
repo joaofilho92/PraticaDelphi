@@ -53,13 +53,13 @@ end;
 
 procedure TForm1.btnSalvaClick(Sender: TObject);
 begin
-  memo1.Lines.SaveToFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
+  memo1.Lines.SaveToFile('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt');
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  if FileExists('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt') then
-  memo1.Lines.LoadFromFile('C:\Users\Joao\Desktop\Dev\Projetos\Projetos Delphi\PraticaDelphi\testo.txt');
+  if FileExists('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt') then
+  memo1.Lines.LoadFromFile('C:\Users\Utente\Desktop\Progetti\Progetti Delphi\PraticaDelphi-main\test.txt');
 end;
 
 end.
