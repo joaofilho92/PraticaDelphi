@@ -19,6 +19,8 @@ object mainForm: TmainForm
     Height = 594
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 800
+    ExplicitHeight = 593
     object Label1: TLabel
       Left = 40
       Top = 16
@@ -121,10 +123,10 @@ object mainForm: TmainForm
       OnClick = btnSalvaClick
     end
     object Button1: TButton
-      Left = 702
+      Left = 696
       Top = 16
-      Width = 75
-      Height = 25
+      Width = 81
+      Height = 32
       Caption = 'Form2'
       TabOrder = 5
       OnClick = Button1Click
